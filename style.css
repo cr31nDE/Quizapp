@@ -1,0 +1,39 @@
+.chooseBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f5e8f5;
+}
+
+.marginBottomMinWidth{
+    margin-bottom: 32px;
+    min-width: 100px;
+}
+
+.d-none{
+    display: none;
+}
+
+.questionCard{
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    top: 0px;
+    margin-top: 64px;
+    max-width: 500px;
+    width: 100% !important;
+    
+}
+
+.answerContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.background{
+    background-color:#4ba8fd ;
+}

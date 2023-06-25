@@ -6,23 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizapp</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div>Frage 1</div>
-    <button class="btn btn-secondary">klick me</button>
-    <a href="#">ich bin ein Link</a>
-
-    <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
+    <div class="chooseBtn">
+        <button type="button" class="btn marginBottomMinWidth btn-secondary">EASY</button>
+        <button type="button" class="btn marginBottomMinWidth btn-secondary">MEDIUM</button>
+        <button type="button" class="btn marginBottomMinWidth btn-secondary">HARD</button>
+    </div>
+    <div class="card questionCard" style="width: 18rem;">
+        <img src="img/question.png" card-img-top" alt="...">
+        <div class="card-body background">
             <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's
                 content.</p>
-            <a href="#" class="btn btn-primary">starte quiz</a>
+            <div class="answerContainer">
+                <button type="button" class="marginBottomMinWidth btn btn-light">Light</button>
+                <button type="button" class="marginBottomMinWidth btn btn-light">Light</button>
+                <button type="button" class="marginBottomMinWidth btn btn-light">Light</button>
+                <button type="button" class="marginBottomMinWidth btn btn-light">Light</button>
+            </div>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
     </div>
-    <div>asdsa</div>
 </body>
 
 </html>
