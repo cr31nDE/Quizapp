@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background-color: #f5e8f5;
+    background-color: #283B42;
 }
 
 .marginBottomMinWidth{
@@ -22,10 +22,13 @@
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
-    top: 0px;
-    margin-top: 64px;
+    top: -1000px;
+    margin-top: 32px;
     max-width: 500px;
     width: 100% !important;
+    transition: all 125ms ease-in-out;
+    border: 1px solid #1D6A96;
+    color: white;
     
 }
 
@@ -35,5 +38,15 @@
 }
 
 .background{
-    background-color:#4ba8fd ;
+    background-color: #1D6A96;
+}
+
+.containerBottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+
+
+
 }

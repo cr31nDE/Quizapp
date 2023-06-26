@@ -7,27 +7,35 @@
     <title>Quizapp</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
     <div class="chooseBtn">
-        <button type="button" class="btn marginBottomMinWidth btn-secondary">EASY</button>
-        <button type="button" class="btn marginBottomMinWidth btn-secondary">MEDIUM</button>
-        <button type="button" class="btn marginBottomMinWidth btn-secondary">HARD</button>
+        <button type="button" onclick="toggleEasyQuestion()" class="btn marginBottomMinWidth btn-secondary">EASY</button>
+        <button type="button" onclick="toggleMediumQuestion()" class="btn marginBottomMinWidth btn-secondary">MEDIUM</button>
+        <button type="button" onclick="toggleHardQuestion()" class="btn marginBottomMinWidth btn-secondary">HARD</button>
     </div>
-    <div class="card questionCard" style="width: 18rem;">
-        <img src="img/question.png" card-img-top" alt="...">
+    <div class="card questionCard" id="questionCard" style="width: 18rem;">
+        <img src="img/question.png">
+        
         <div class="card-body background">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's
+            <p class="card-text" id="question1">Some quick example text to build on the card title and make up the bulk of the card's
                 content.</p>
+               
             <div class="answerContainer">
-                <button type="button" class="marginBottomMinWidth btn btn-light">Light</button>
-                <button type="button" class="marginBottomMinWidth btn btn-light">Light</button>
-                <button type="button" class="marginBottomMinWidth btn btn-light">Light</button>
-                <button type="button" class="marginBottomMinWidth btn btn-light">Light</button>
+                <button type="button" id="answer1" onclick="checkAnswer('1')" class="marginBottomMinWidth btn btn-light">Light</button>
+                <button type="button" id="answer2" onclick="checkAnswer('2')" class="marginBottomMinWidth btn btn-light">Light</button>
+                <button type="button" id="answer3" onclick="checkAnswer('3')" class="marginBottomMinWidth btn btn-light">Light</button>
+                <button type="button" id="answer4" onclick="checkAnswer('4')" class="marginBottomMinWidth btn btn-light">Light</button>
             </div>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-warning" id="progressBar" style="width: 75%"></div>
+              </div>
+            <div class="containerBottom">
+                <div id="countQuestion">1/7</div>
+                <button type="button" class="btn btn-warning">Next</button>
+            </div>
         </div>
     </div>
 </body>
