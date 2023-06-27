@@ -29,7 +29,14 @@
     transition: all 125ms ease-in-out;
     border: 1px solid #1D6A96;
     color: white;
-    
+    border: 1px solid #283B42;
+}
+
+img{
+    max-width: 498px;
+    max-height: 383px;
+    object-fit: cover;
+    background-color: aquamarine;
 }
 
 .answerContainer{
@@ -46,7 +53,12 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 32px;
+}
 
+.success{
+    background-color: #FFC107;
+}
 
-
+.wrong{
+    background-color: darkgrey;
 }

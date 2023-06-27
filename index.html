@@ -12,9 +12,9 @@
 
 <body>
     <div class="chooseBtn">
-        <button type="button" onclick="toggleEasyQuestion()" class="btn marginBottomMinWidth btn-secondary">EASY</button>
-        <button type="button" onclick="toggleMediumQuestion()" class="btn marginBottomMinWidth btn-secondary">MEDIUM</button>
-        <button type="button" onclick="toggleHardQuestion()" class="btn marginBottomMinWidth btn-secondary">HARD</button>
+        <button type="button" onclick="toggleEasyQuestion('1')" class="btn marginBottomMinWidth btn-secondary">EASY</button>
+        <button type="button" onclick="toggleMediumQuestion('1')" class="btn marginBottomMinWidth btn-secondary">MEDIUM</button>
+        <button type="button" onclick="toggleHardQuestion('1')" class="btn marginBottomMinWidth btn-secondary">HARD</button>
     </div>
     <div class="card questionCard" id="questionCard" style="width: 18rem;">
         <img src="img/question.png">
@@ -34,7 +34,7 @@
               </div>
             <div class="containerBottom">
                 <div id="countQuestion">1/7</div>
-                <button type="button" class="btn btn-warning">Next</button>
+                <button type="button" onclick="toggleNextQuestion()" id="nextButton" disabled class="btn btn-warning">Next</button>
             </div>
         </div>
     </div>

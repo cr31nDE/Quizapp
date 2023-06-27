@@ -8,60 +8,94 @@ let EasyQuesttions = [
         "rightAnswer": "1"
     },
     {
-        "question1": "was ist 1 + 1?",
+        "question2": "was ist 1 + 2?",
         "answer1": "2",
         "answer2": "3",
         "answer3": "4",
         "answer4": "5",
+        "rightAnswer": "2"
     },
     {
-        "question1": "was ist 1 + 1?",
+        "question3": "was ist 1 + 3?",
         "answer1": "2",
         "answer2": "3",
         "answer3": "4",
         "answer4": "5",
+        "rightAnswer": "3"
     },
     {
-        "question1": "was ist 1 + 1?",
+        "question4": "was ist 1 + 4?",
         "answer1": "2",
         "answer2": "3",
         "answer3": "4",
         "answer4": "5",
+        "rightAnswer": "4"
     },
     {
-        "question1": "was ist 1 + 1?",
+        "question5": "was ist 1 + 5?",
         "answer1": "2",
         "answer2": "3",
-        "answer3": "4",
+        "answer3": "6",
         "answer4": "5",
+        "rightAnswer": "3"
     },
 ]
 
+let x = 0;
 
-function toggleEasyQuestion(){
+function toggleEasyQuestion() {
     let questionCard = document.getElementById('questionCard');
     questionCard.style.top = '0px';
     let question = document.getElementById('question1');
     let answer1 = document.getElementById('answer1');
-    let answer2 = document.getElementById('answer2'); 
+    let answer2 = document.getElementById('answer2');
     let answer3 = document.getElementById('answer3');
     let answer4 = document.getElementById('answer4');
-    question.innerHTML = EasyQuesttions[0]['question1'];
-    answer1.innerHTML = EasyQuesttions[0]['answer1'];
-    answer2.innerHTML = EasyQuesttions[0]['answer2'];
-    answer3.innerHTML = EasyQuesttions[0]['answer3'];
-    answer4.innerHTML = EasyQuesttions[0]['answer4'];
+    question.innerHTML = EasyQuesttions[x]['question1'];
+    answer1.innerHTML = EasyQuesttions[x]['answer1'];
+    answer2.innerHTML = EasyQuesttions[x]['answer2'];
+    answer3.innerHTML = EasyQuesttions[x]['answer3'];
+    answer4.innerHTML = EasyQuesttions[x]['answer4'];
 }
 
-function checkAnswer(id){
+function checkAnswer(id) {
     let answer = document.getElementById(`answer${id}`);
-    let rightAnswerId = EasyQuesttions[0]['rightAnswer'];
+    let rightAnswerId = EasyQuesttions[x]['rightAnswer'];
     let rightAnswer = document.getElementById(`answer${rightAnswerId}`);
-    if (answer == rightAnswer) {
-        answer.style.backgroundColor = '#FFC107';
+    let next = document.getElementById('nextButton');
+    if (next.disabled == true) {
+        if (answer == rightAnswer) {
+            answer.classList.add('success');
+        }
+        else {
+            rightAnswer.classList.add('success');
+            answer.classList.add('wrong');
+        }
     }
-    else{
-        rightAnswer.style.backgroundColor = '#FFC107';
-        answer.style.backgroundColor = 'darkgrey';
-    }
+    
+    next.disabled = false;
+}
+
+function toggleNextQuestion() {
+    x++;
+    let question = document.getElementById(`question1`);
+    let answer1 = document.getElementById('answer1');
+    let answer2 = document.getElementById('answer2');
+    let answer3 = document.getElementById('answer3');
+    let answer4 = document.getElementById('answer4');
+    question.innerHTML = EasyQuesttions[x][`question${x + 1}`];
+    answer1.innerHTML = EasyQuesttions[x]['answer1'];
+    answer2.innerHTML = EasyQuesttions[x]['answer2'];
+    answer3.innerHTML = EasyQuesttions[x]['answer3'];
+    answer4.innerHTML = EasyQuesttions[x]['answer4'];
+    answer1.classList.remove('success');
+    answer1.classList.remove('wrong');
+    answer2.classList.remove('success');
+    answer2.classList.remove('wrong');
+    answer3.classList.remove('success');
+    answer3.classList.remove('wrong');
+    answer4.classList.remove('success');
+    answer4.classList.remove('wrong');
+    let next = document.getElementById('nextButton');
+    next.disabled = true;
 }
