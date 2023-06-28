@@ -5,7 +5,8 @@ let EasyQuesttions = [
         "answer2": "3",
         "answer3": "4",
         "answer4": "5",
-        "rightAnswer": "1"
+        "rightAnswer": "1",
+        "difficulty": "einfach"
     },
     {
         "question2": "was ist 1 + 2?",
@@ -13,7 +14,8 @@ let EasyQuesttions = [
         "answer2": "3",
         "answer3": "4",
         "answer4": "5",
-        "rightAnswer": "2"
+        "rightAnswer": "2",
+        "difficulty": "einfach"
     },
     {
         "question3": "was ist 1 + 3?",
@@ -21,7 +23,8 @@ let EasyQuesttions = [
         "answer2": "3",
         "answer3": "4",
         "answer4": "5",
-        "rightAnswer": "3"
+        "rightAnswer": "3",
+        "difficulty": "einfach"
     },
     {
         "question4": "was ist 1 + 4?",
@@ -29,7 +32,8 @@ let EasyQuesttions = [
         "answer2": "3",
         "answer3": "4",
         "answer4": "5",
-        "rightAnswer": "4"
+        "rightAnswer": "4",
+        "difficulty": "einfach"
     },
     {
         "question5": "was ist 1 + 5?",
@@ -37,13 +41,14 @@ let EasyQuesttions = [
         "answer2": "3",
         "answer3": "6",
         "answer4": "5",
-        "rightAnswer": "3"
+        "rightAnswer": "3",
+        "difficulty": "einfach"
     },
 ]
 
 let x = 0;
 
-function toggleEasyQuestion() {
+function toggleEasyQuestion(b) {
     let questionCard = document.getElementById('questionCard');
     questionCard.style.top = '0px';
     let question = document.getElementById('question1');
@@ -51,11 +56,11 @@ function toggleEasyQuestion() {
     let answer2 = document.getElementById('answer2');
     let answer3 = document.getElementById('answer3');
     let answer4 = document.getElementById('answer4');
-    question.innerHTML = EasyQuesttions[x]['question1'];
-    answer1.innerHTML = EasyQuesttions[x]['answer1'];
-    answer2.innerHTML = EasyQuesttions[x]['answer2'];
-    answer3.innerHTML = EasyQuesttions[x]['answer3'];
-    answer4.innerHTML = EasyQuesttions[x]['answer4'];
+    question.innerHTML = b[x]['question1'];
+    answer1.innerHTML = b[x]['answer1'];
+    answer2.innerHTML = b[x]['answer2'];
+    answer3.innerHTML = b[x]['answer3'];
+    answer4.innerHTML = b[x]['answer4'];
 }
 
 function checkAnswer(id) {
