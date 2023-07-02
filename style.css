@@ -1,4 +1,13 @@
-.chooseBtn{
+body {
+    font-family: cursive, sans-serif;
+}
+
+.head {
+    color: white;
+    margin-bottom: 64px;
+}
+
+.chooseBtn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,7 +16,12 @@
     background-color: #283B42;
 }
 
-.marginBottomMinWidth{
+.difficultyBtn:hover {
+    background-color: aquamarine;
+    color: black;
+}
+
+.marginBottomMinWidth {
     margin-bottom: 24px;
     min-width: 100px;
     text-align: center;
@@ -15,16 +29,16 @@
     cursor: pointer;
 }
 
-.d-none{
+.d-none {
     display: none;
 }
 
-.questionCard{
-    position: absolute; 
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
+.questionCard {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     top: -1000px;
     margin-top: 32px;
     max-width: 500px;
@@ -35,40 +49,40 @@
     border: 1px solid #283B42;
 }
 
-img{
+img {
     max-width: 498px;
     max-height: 383px;
     object-fit: cover;
     background-color: aquamarine;
 }
 
-.answerContainer{
+.answerContainer {
     display: flex;
     flex-direction: column;
 }
 
-.background{
+.background {
     background-color: #1D6A96;
 }
 
-.containerBottom{
+.containerBottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 32px;
 }
 
-.success{
-    background-color: #FFC107;
+.success {
+    background-color: aquamarine;
 }
 
-.wrong{
+.wrong {
     background-color: darkgrey;
 }
 
-.difficulty{
-   font-size: 22px;
-   background-color: #FFC107 !important;
+.difficulty {
+    font-size: 22px;
+    background-color: aquamarine !important;
 }
 
 .btn-light:not([disabled]):not(.disabled).active,
@@ -78,4 +92,58 @@ img{
     color: #111 !important;
     background-color: #f8f9fa !important;
     border-color: #f8f9fa !important;
+}
+
+.bodyEnd {
+    text-align: center;
+    font-size: 48px;
+    height: 422px;
+    Padding-top: 64px;
+}
+
+.btnRight {
+    display: flex;
+    justify-content: end;
+}
+
+.btnEnd {
+    margin-top: 64px;
+    margin-right: 48px;
+    background-color: aquamarine;
+}
+
+.btnEnd:hover {
+    opacity: 0.8;
+    background-color: aquamarine;
+    border-color: aquamarine;
+}
+
+.nextBtn {
+    background-color: aquamarine !important;
+    border-color: aquamarine !important
+}
+
+.porgressColor {
+    background-color: aquamarine !important;
+}
+
+@media screen and (max-width:500px) {
+    .bodyEnd {
+        font-size: 38px;
+    }
+
+    .questionCard {
+        height: 100%;
+        margin-top: 0;
+    }
+
+    .btnEnd {
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-height:800px) {
+    img{
+        max-height: 210px;
+    }
 }

@@ -12,14 +12,15 @@
 
 <body>
     <div class="chooseBtn">
-        <button type="button" onclick="toggleEasyQuestion(EasyQuesttions)" class="btn marginBottomMinWidth btn-secondary">EASY</button>
-        <button type="button" onclick="toggleMediumQuestion(MediumQuestions)" class="btn marginBottomMinWidth btn-secondary">MEDIUM</button>
-        <button type="button" onclick="toggleHardQuestion(HardQuestions)" class="btn marginBottomMinWidth btn-secondary">HARD</button>
+      <h1 class="head">Starte dein Quiz</h1>
+        <button type="button" onclick="toggleQuestion(EasyQuestions)" class="difficultyBtn btn marginBottomMinWidth btn-secondary">EASY</button>
+        <button type="button" onclick="toggleQuestion(MediumQuestions)" class="difficultyBtn btn marginBottomMinWidth btn-secondary">MEDIUM</button>
+        <button type="button" onclick="toggleQuestion(HardQuestions)" class="difficultyBtn btn marginBottomMinWidth btn-secondary">HARD</button>
     </div>
     <div class="card questionCard" id="questionCard" style="width: 18rem;">
-        <img src="img/question.png">
+        <img id="questionImg" src="img/question.png">
         
-        <div class="card-body background">
+        <div class="card-body background" id="cardBody">
             <p class="card-text" id="question1">Some quick example text to build on the card title and make up the bulk of the card's
                 content.</p>
                
@@ -46,11 +47,11 @@
                   </div>
             </div>
             <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar bg-warning" id="progressBar" style="width: 75%"></div>
+                <div class="porgressColor progress-bar bg-success" id="progressBar" style="width: 0%"></div>
               </div>
             <div class="containerBottom">
                 <div id="countQuestion">1/7</div>
-                <span class=" difficulty badge rounded-pill text-bg-info">einfach</span>
+                <span class=" difficulty badge rounded-pill text-bg-info" id="difficulty">easy</span>
                 <button type="button" onclick="toggleNextQuestion()" id="nextButton" disabled class="nextBtn btn btn-warning">Next</button>
             </div>
         </div>
